@@ -25,22 +25,23 @@ function AgencyDetails() {
             <p>Address: {agency.address}</p>
           </div>
 
+          <div className = "map">
+            <MapContainer center={agency.coordinates} zoom={15} style={{ height: '400px', width: '100%'}}>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
 
-          <MapContainer center={agency.coordinates} zoom={15} style={{ height: '400px', width: '100%'}}>
-            <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-
-            <Marker position={agency.coordinates} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
-            </Marker>
-          </MapContainer>
-          <div className = "container-specific-details">
-            <p>Phone: {agency.phone_number}</p>
-            <p>Total Cost: {agency.total_cost}</p>
-            <p>Avg Patient Age: {agency.average_patient_age}</p>
-            <p>In Claim Cost: {agency.average_inpatient_claim_cost}</p>
-            <p>Out Claim Cost: {agency.average_outpatient_claim_cost}</p>
+              <Marker position={agency.coordinates} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
+              </Marker>
+            </MapContainer>
+            <div className = "container-specific-details">
+              <p>Phone: {agency.phone_number}</p>
+              <p>Total Cost: {agency.total_cost}</p>
+              <p>Avg Patient Age: {agency.average_patient_age}</p>
+              <p>In Claim Cost: {agency.average_inpatient_claim_cost}</p>
+              <p>Out Claim Cost: {agency.average_outpatient_claim_cost}</p>
+            </div>
           </div>
         </div>
       </div>
