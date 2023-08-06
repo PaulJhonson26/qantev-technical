@@ -4,7 +4,9 @@ import data from '../data_sample.json';
 
 function AgencyList() {
   return (
-        <table className= "table-agencies">
+    <div>
+      <h2 className = "table-title">Medical Providers</h2>
+      <table className= "table-agencies">
         <thead>
           <tr>
             <th>Name</th>
@@ -31,6 +33,8 @@ function AgencyList() {
           ))}
         </tbody>
         </table>
+    </div>
+
 
   );
 }

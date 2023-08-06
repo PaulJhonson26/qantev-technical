@@ -12,7 +12,7 @@ function App() {
           </div>
         </div>
         <div className="container-main">
-          <div>
+          <div className = "container-content">
             <AgencyList />
           </div>
         </div>

@@ -1,34 +1,65 @@
 .container-main {
-  background: linear-gradient(to top, #3dd0ea 0%, #000aaa 100%);;
+  background: linear-gradient(to top, #21cbc5 0%, #000555 100%);;
   height: 100vh;
   width: 100%;
   padding: 20px;
   font-family: Poppins,sans-serif;
+  color: white;
+  margin: 0 auto;
+}
+
+.container-content{
+  width: 85%;
+  margin: 0 auto;
 }
 .container-banner {
   height: 80px;
   width: 100%;
-  background-color: #000aaa;
+  background-color: #000555;
   display: flex;
   align-items: center;
   padding-inline: 10px;
   border: 1px solid white;
 }
 
+.container-specific-details{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.title-details{
+  width: 100%;
+  text-align: center;
+  padding-block: 20px;
+}
 .table-agencies {
   width: 80%;
   margin: 5px auto;
   height: 90%;
   border: 1px solid black;
   background-color: #ffffff;
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.2);
+  color: #111111
 }
 
 thead {
   text-align: left;
+  font-size: 20px;
+  height: 40px;
 }
 
 td {
   height: 30px;
+}
+
+.table-title{
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+a {
+  text-decoration: none;
 }
