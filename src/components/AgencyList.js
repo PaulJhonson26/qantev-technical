@@ -15,10 +15,10 @@ function AgencyList() {
           </tr>
         </thead>
         <tbody>
-          {data.map((agency) => (
+          {data.map((agency) => ( /*add each agency to the table*/
                 <tr>
                   <td>
-                    <Link to={`/element/${agency.id}`}>
+                    <Link to={`/agency/${agency.id}`}>
                     {agency.name}
                     </Link>
                   </td>

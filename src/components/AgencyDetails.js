@@ -2,14 +2,15 @@ import React from 'react';
 import logo from '../Qantev_Logo.png';
 import { useParams } from 'react-router-dom';
 import data from '../data_sample.json';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import {Icon} from 'leaflet'
+import { Link } from 'react-router-dom';
 
 function AgencyDetails() {
   const { id } = useParams();
-  const agency = data.find((a) => a.id == id)
+  const agency = data.find((a) => a.id == id) // get the corresponding agency from the id passed in params
   console.log(data[0].coordinates)
   return (
     <div>
@@ -20,9 +21,14 @@ function AgencyDetails() {
       </div>
       <div className="container-main">
         <div className = "container-content">
-          <div className = "title-details">
-            <h1>{agency.name}</h1>
-            <p>Address: {agency.address}</p>
+          <div className = "flex-title">
+            <Link to={`/`}>
+              <i class="fa-solid fa-arrow-left"></i>
+            </Link>
+            <div className = "title-details">
+              <h1>{agency.name}</h1>
+              <p>Address: {agency.address}</p>
+            </div>
           </div>
 
           <div className = "map">

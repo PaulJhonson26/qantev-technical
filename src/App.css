@@ -88,3 +88,12 @@ a {
   color: #111111;
   font-size: 20px;
 }
+.flex-title {
+  display: flex;
+  align-items: center;
+}
+
+i {
+  font-size: 20px;
+  color: white;
+}
